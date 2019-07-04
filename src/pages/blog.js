@@ -5,13 +5,13 @@ import { Link } from 'components/Router'
 import universal from "react-universal-component";
 
 const Bottomlink = universal(import("../components/Bottomlink"), {
-  loading: <span>Loading Bottomlink</span>,
-  error: <span style={{color:"red"}}>ERROR loading Bottomlink</span>
+  loading: () => <span>Loading Bottomlink</span>,
+  error: () => <span style={{color:"red"}}>ERROR loading Bottomlink</span>
 });
 
 const Toplink = universal(import("../components/Toplink"), {
-  loading: <span>Loading Toplink</span>,
-  error: <span style={{color:"red"}}>ERROR loading Toplink</span>
+  loading: () => <span>Loading Toplink</span>,
+  error: () => <span style={{color:"red"}}>ERROR loading Toplink</span>
 });
 
 export default function Blog() {
